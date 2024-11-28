@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Link Test</title>
+    <style>
+        /* General styles for links */
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            color: #fff;
+            background-color: #007bff;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Desktop-specific styling */
+        @media (min-width: 768px) {
+            a {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+
+            .desktop-only {
+                display: inline-block;
+            }
+
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        /* Mobile-specific styling */
+        @media (max-width: 767px) {
+            a {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Desktop-specific link -->
+    <a href="mailto:darshanpro187@gmail.com?subject=Hello&body=Please%20write%20your%20message%20here"
+        class="desktop-only" target="_blank">
+        Send Email (Desktop)
+    </a>
+
+    <!-- Mobile-specific link -->
+    <a href="intent://send/?to=darshanpro187@gmail.com&subject=Hello&body=Write%20your%20message%20here#Intent;scheme=mailto;package=com.google.android.gm;end;"
+        class="mobile-only" target="_blank">
+        Open Gmail App (Mobile)
+    </a>
+</body>
+
+</html>
